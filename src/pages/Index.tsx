@@ -13,32 +13,32 @@ const Index = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <InfoSection 
-            title="Intereses"
+            title="Mis intereses"
             content="Mis intereses se basan en la tecnología en general, tanto los dispositivos móviles, computadores, audífonos, etc."
           />
           
           <InfoSection 
-            title="Pasatiempos"
+            title="Mis pasatiempos"
             content="Mis pasatiempos favoritos son jugar videojuegos, escuchar música, pasar tiempo con mis amigos y familiares."
           />
           
           <InfoSection 
-            title="Comida Favorita"
+            title="Mi comida favorita"
             content="Mi comida favorita son las pastas con carne molida y las hamburguesas."
           />
           
           <InfoSection 
-            title="Hechos Curiosos"
+            title="Algunos hechos curiosos"
             content="Me obsesiono con los audífonos, cada que veo un diseño diferente o por así decirlo exótico, lo quiero. Soy muy estricto en cuanto a la calidad del sonido y la música. Hablo mucho y hago chistes muy malos que aun así hacen reír."
           />
           
           <InfoSection 
-            title="Cita Favorita"
+            title="Mi tipo de cita favorita"
             content="Algo casual, que no se planee y que fluya el momento."
           />
           
           <InfoSection 
-            title="Lema de Vida"
+            title="Mi lema de vida"
             content="Hay que saber vivir cada momento, disfrutar sin dañar a los demás, pero lo más importante es ser feliz siempre."
           />
         </div>
