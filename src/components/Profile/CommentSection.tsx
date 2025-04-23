@@ -21,10 +21,10 @@ const CommentSection = () => {
   };
 
   return (
-    <Card className="p-6">
+    <Card className="p-6 mt-12 bg-black/50 border-blue-600/50">
       <div className="flex items-center gap-2 mb-4">
         <MessageCircle className="w-6 h-6 text-blue-600" />
-        <h2 className="text-2xl font-semibold">Comentarios</h2>
+        <h2 className="text-2xl font-semibold text-blue-600">Comentarios</h2>
       </div>
       
       <form onSubmit={handleSubmit} className="mb-6">
@@ -32,15 +32,17 @@ const CommentSection = () => {
           value={newComment}
           onChange={(e) => setNewComment(e.target.value)}
           placeholder="Deja un comentario..."
-          className="mb-3"
+          className="mb-3 bg-black/50 text-gray-300 border-blue-600/50 focus:border-blue-600"
         />
-        <Button type="submit">Enviar comentario</Button>
+        <Button type="submit" className="bg-blue-600 hover:bg-blue-700">
+          Enviar comentario
+        </Button>
       </form>
 
       <div className="space-y-4">
         {comments.map((comment, index) => (
-          <div key={index} className="p-4 bg-gray-50 rounded-lg">
-            <p className="text-gray-700">{comment.text}</p>
+          <div key={index} className="p-4 bg-black/30 border border-blue-600/30 rounded-lg">
+            <p className="text-gray-300">{comment.text}</p>
             <p className="text-sm text-gray-500 mt-2">{comment.date}</p>
           </div>
         ))}

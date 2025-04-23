@@ -12,7 +12,10 @@ const PhotoGallery = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
       {photos.map((photo, index) => (
-        <div key={index} className="aspect-video rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300">
+        <div 
+          key={index} 
+          className="aspect-video rounded-lg overflow-hidden hover:scale-105 transition-transform duration-300 border border-blue-600/50 hover:border-blue-600"
+        >
           <img
             src={photo}
             alt={`Foto ${index + 1}`}
