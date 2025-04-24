@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Redireccionando</title>
+  <script type="text/javascript">
+    // Obtiene la ruta actual y la redirige a la página principal con parámetros
+    var pathSegmentsToKeep = 1;
+    var l = window.location;
+    
+    // Remueve el hash si existe
+    var href = l.href.substring(0, l.href.length - ((l.hash || "").length)) +
+      l.search + (l.search ? "&" : "?") + "p=" + l.pathname.split('/').slice(pathSegmentsToKeep).join('/');
+      
+    l.replace(
+      l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
+      l.pathname.split('/').slice(0, pathSegmentsToKeep).join('/') + '/?/' +
+      l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
+      (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+      l.hash
+    );
+  </script>
+</head>
+<body>
+  Redireccionando...
+</body>
+</html>
